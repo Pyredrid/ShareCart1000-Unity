@@ -28,7 +28,7 @@ ShareCart1000.SetSwitchByIndex(true, 6); //Sets Switch6 to the value TRUE
 ShareCart1000.SetSwitch3(false); //Sets Switch3 to the value FALSE
 
 //What not to do
-ShareCart1000.SetSwitch(false, 100); //Throws an ArgumentOutOfRangeException since there are only 8 switches
-ShareCart1000.GetMisc(6); //Throws an ArgumentOutOfRangeException since there are only 4 misc
+ShareCart1000.SetSwitchByIndex(false, 100); //Throws an ArgumentOutOfRangeException since there are only 8 switches
+ShareCart1000.GetMiscByIndex(4); //Throws an ArgumentOutOfRangeException since there are only 4 misc starting at index 0
 ShareCart1000.SetMapX(1337); //Throws an Exception since MapX has to be between 0-1023
 ```
