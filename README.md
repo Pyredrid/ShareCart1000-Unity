@@ -1,4 +1,5 @@
 # ShareCart1000-Unity
+A [ShareCart1000](http://sharecart1000.com/) utility class for Unity3D.
 
 ## Dependencies:
 https://github.com/rickyah/ini-parser
@@ -9,7 +10,6 @@ https://www.dropbox.com/s/9gz41m61nfai0wx/ShareCart1000.unitypackage?dl=1
 
 
 ## Info
-This is a mostly untested ShareCart1000 utility class for Unity3D and its very messy, but at least it has documentation.
 
 Every function that sets a value will also immediately save to file.  This means there is no buffer and multiple calls to setting values will save the file each time.  I know its inefficient, if you want to make it better make a pull request.
 
@@ -22,8 +22,10 @@ This class follows the guide here as best as it can: http://sharecart1000.com/im
 ```C#
 //What to do
 ShareCart1000.CreateDefaultShareCart(); //Creates a new save file with default data
-ShareCart1000.SetMisc(1337, 2); //Sets Misc2 to the value 1337
-ShareCart1000.SetSwitch(true, 6); //Sets Switch6 to the value TRUE
+ShareCart1000.SetMiscByIndex(1337, 2); //Sets Misc2 to the value 1337
+ShareCart1000.SetMisc2(1337); //Also sets Misc2 to the value 1337
+ShareCart1000.SetSwitchByIndex(true, 6); //Sets Switch6 to the value TRUE
+ShareCart1000.SetSwitch3(false); //Sets Switch3 to the value FALSE
 
 //What not to do
 ShareCart1000.SetSwitch(false, 100); //Throws an ArgumentOutOfRangeException since there are only 8 switches

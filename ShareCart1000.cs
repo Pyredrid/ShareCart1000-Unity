@@ -39,7 +39,7 @@ public static class ShareCart1000 {
 	/// </summary>
 	/// <param name="newValue">Sets the switch as index to this.</param>
 	/// <param name="switchIndex">Switch index to set.</param>
-	public static void SetSwitch(bool newValue, int switchIndex){
+	public static void SetSwitchByIndex(bool newValue, int switchIndex){
 		if(switchIndex < 0 || switchIndex > 7){
 			Debug.LogWarning("The switch index of "+switchIndex+" is not in range of 0-7");
 			throw new ArgumentOutOfRangeException("The switch index of "+switchIndex+" is not in range of 0-7");
@@ -63,7 +63,7 @@ public static class ShareCart1000 {
 	/// </summary>
 	/// <returns><c>true</c>, if switch at index was true, <c>false</c> if switch at index was false</returns>
 	/// <param name="switchIndex">Switch index to retrieve.</param>
-	public static bool GetSwitch(int switchIndex){
+	public static bool GetSwitchByIndex(int switchIndex){
 		if(switchIndex < 0 || switchIndex > 7){
 			Debug.LogWarning("The switch index of "+switchIndex+" is not in range of 0-7");
 			throw new ArgumentOutOfRangeException("The switch index of "+switchIndex+" is not in range of 0-7");
@@ -83,7 +83,7 @@ public static class ShareCart1000 {
 			}
 		} else {
 			CreateAndOverrideSave();
-			return GetSwitch(switchIndex);
+			return GetSwitchByIndex(switchIndex);
 		}
 	}
 
@@ -92,7 +92,7 @@ public static class ShareCart1000 {
 	/// </summary>
 	/// <param name="newValue">Sets the misc at the given index to this</param>
 	/// <param name="miscIndex">Misc index to set</param>
-	public static void SetMisc(ushort newValue, int miscIndex){
+	public static void SetMiscByIndex(ushort newValue, int miscIndex){
 		if(miscIndex < 0 || miscIndex > 3){
 			Debug.LogWarning("The misc index of "+miscIndex+" is not in range of 0-3");
 			throw new ArgumentOutOfRangeException("The Misc index of "+miscIndex+" is not in range of 0-3");
@@ -111,7 +111,7 @@ public static class ShareCart1000 {
 	/// </summary>
 	/// <returns>The Misc key at the given index</returns>
 	/// <param name="miscIndex">Misc index to retrieve</param>
-	public static ushort GetMisc(int miscIndex){
+	public static ushort GetMiscByIndex(int miscIndex){
 		if(miscIndex < 0 || miscIndex > 3){
 			Debug.LogWarning("The misc index of "+miscIndex+" is not in range of 0-3");
 			throw new ArgumentOutOfRangeException("The misc index of "+miscIndex+" is not in range of 0-3");
@@ -130,7 +130,7 @@ public static class ShareCart1000 {
 			}
 		} else {
 			CreateAndOverrideSave();
-			return GetMisc(miscIndex);
+			return GetMiscByIndex(miscIndex);
 		}
 	}
 
@@ -252,6 +252,154 @@ public static class ShareCart1000 {
 			CreateAndOverrideSave();
 			return GetPlayerName();
 		}
+	}
+	
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetMiscByIndex(newValue, 0)"/>
+	/// </summary>
+	public static void SetMisc0(ushort newValue){
+		SetMiscByIndex (newValue, 0);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetMiscByIndex(newValue, 1)"/>
+	/// </summary>
+	public static void SetMisc1(ushort newValue){
+		SetMiscByIndex (newValue, 1);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetMiscByIndex(newValue, 2)"/>
+	/// </summary>
+	public static void SetMisc2(ushort newValue){
+		SetMiscByIndex (newValue, 2);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetMiscByIndex(newValue, 3)"/>
+	/// </summary>
+	public static void SetMisc3(ushort newValue){
+		SetMiscByIndex (newValue, 3);
+	}
+
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetMiscByIndex(0)"/>
+	/// </summary>
+	public static ushort GetMisc0(){
+		return GetMiscByIndex (0);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetMiscByIndex(1)"/>
+	/// </summary>
+	public static ushort GetMisc1(){
+		return GetMiscByIndex (1);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetMiscByIndex(2)"/>
+	/// </summary>
+	public static ushort GetMisc2(){
+		return GetMiscByIndex (2);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetMiscByIndex(3)"/>
+	/// </summary>
+	public static ushort GetMisc3(){
+		return GetMiscByIndex (3);
+	}
+	
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 0)"/>
+	/// </summary>
+	public static void SetSwitch0(bool newValue){
+		SetSwitchByIndex (newValue, 0);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 1)"/>
+	/// </summary>
+	public static void SetSwitch1(bool newValue){
+		SetSwitchByIndex (newValue, 1);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 2)"/>
+	/// </summary>
+	public static void SetSwitch2(bool newValue){
+		SetSwitchByIndex (newValue, 2);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 3)"/>
+	/// </summary>
+	public static void SetSwitch3(bool newValue){
+		SetSwitchByIndex (newValue, 3);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 4)"/>
+	/// </summary>
+	public static void SetSwitch4(bool newValue){
+		SetSwitchByIndex (newValue, 4);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 5)"/>
+	/// </summary>
+	public static void SetSwitch5(bool newValue){
+		SetSwitchByIndex (newValue, 5);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 6)"/>
+	/// </summary>
+	public static void SetSwitch6(bool newValue){
+		SetSwitchByIndex (newValue, 6);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.SetSwitchByIndex(newValue, 7)"/>
+	/// </summary>
+	public static void SetSwitch7(bool newValue){
+		SetSwitchByIndex (newValue, 7);
+	}
+	
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(0)"/>
+	/// </summary>
+	public static bool GetSwitch0(){
+		return GetSwitchByIndex (0);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(1)"/>
+	/// </summary>
+	public static bool GetSwitch1(){
+		return GetSwitchByIndex (1);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(2)"/>
+	/// </summary>
+	public static bool GetSwitch2(){
+		return GetSwitchByIndex (2);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(3)"/>
+	/// </summary>
+	public static bool GetSwitch3(){
+		return GetSwitchByIndex (3);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(4)"/>
+	/// </summary>
+	public static bool GetSwitch4(){
+		return GetSwitchByIndex (4);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(5)"/>
+	/// </summary>
+	public static bool GetSwitch5(){
+		return GetSwitchByIndex (5);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(6)"/>
+	/// </summary>
+	public static bool GetSwitch6(){
+		return GetSwitchByIndex (6);
+	}
+	/// <summary>
+	/// Equivalent to <see cref="ShareCart1000.GetSwitchByIndex(7)"/>
+	/// </summary>
+	public static bool GetSwitch7(){
+		return GetSwitchByIndex (7);
 	}
 
 	/// <summary>
