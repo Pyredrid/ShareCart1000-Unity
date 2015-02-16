@@ -6,7 +6,7 @@ https://github.com/rickyah/ini-parser
 
 
 ## Download:
-https://github.com/Pyredrid/ShareCart1000-Unity/releases/download/v2/ShareCart1000-Unity_v2.unitypackage
+https://github.com/Pyredrid/ShareCart1000-Unity/releases
 
 
 ## Info

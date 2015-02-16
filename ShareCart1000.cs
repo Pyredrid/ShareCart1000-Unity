@@ -17,16 +17,15 @@ using IniParser.Model;
 public static class ShareCart1000 {
 	private static FileIniDataParser parser;
 	private static string saveFilePath;
+	private static string saveFileDir;
 	static ShareCart1000() {
-#if UNITY_STANDALONE_OSX
-		//Do an extra layer up because macs are kind of weird
-		saveFilePath = Directory.GetParent(Directory.GetParent (Directory.GetParent (Application.dataPath).FullName).FullName).FullName + "/dat/o_o.ini";
-#else
-		saveFilePath = Directory.GetParent(Directory.GetParent (Application.dataPath).FullName).FullName + "/dat/o_o.ini";
-#endif
 		parser = new FileIniDataParser ();
-		if(!Directory.Exists(Directory.GetParent(Directory.GetParent (Application.dataPath).FullName).FullName + "/dat/")){
-			Directory.CreateDirectory(Directory.GetParent(Directory.GetParent (Application.dataPath).FullName).FullName + "/dat/");
+
+		saveFileDir = Directory.GetParent(Directory.GetParent (Application.dataPath).FullName).FullName + "/dat/";
+		saveFilePath = saveFileDir+"/o_o.ini";
+
+		if(!Directory.Exists(saveFileDir)){
+			Directory.CreateDirectory(saveFileDir);
 		}
 		if(!File.Exists(saveFilePath)){
 			CreateAndOverrideSave();
@@ -424,7 +423,7 @@ public static class ShareCart1000 {
 	public static void CreateAndOverrideSave(){
 		parser.WriteFile (saveFilePath, CreateDefaultShareCart());
 	}
-
+	
 	private static IniData CreateDefaultShareCart(){
 		IniData defaultShareCart = new IniData();
 		defaultShareCart.Sections.AddSection("Main");
