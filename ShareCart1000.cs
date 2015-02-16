@@ -20,8 +20,12 @@ public static class ShareCart1000 {
 	private static string saveFileDir;
 	static ShareCart1000() {
 		parser = new FileIniDataParser ();
-
+		
+#if UNITY_STANDALONE_OSX
+		saveFileDir = Directory.GetParent(Directory.GetParent (Directory.GetParent (Application.dataPath).FullName).FullName).FullName + "/dat/";
+#else
 		saveFileDir = Directory.GetParent(Directory.GetParent (Application.dataPath).FullName).FullName + "/dat/";
+#endif
 		saveFilePath = saveFileDir+"/o_o.ini";
 
 		if(!Directory.Exists(saveFileDir)){
